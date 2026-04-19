@@ -1,0 +1,366 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kLbfxqX7RYqB",
+        "outputId": "35bb96f6-b1ae-4130-a91d-26403461bb3c"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 2, 5])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "# buat vector x dan y dengan ukuran 1x3 menggunakan numpy\n",
+        "import numpy as np\n",
+        "\n",
+        "x = np.array([1, 2, 5])\n",
+        "x"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "y = np.array([0, 1, 2])\n",
+        "y"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CQjXfoTFSUKp",
+        "outputId": "634f9b47-88dc-4727-a43f-f6336c9483b6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([0, 1, 2])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# buat vector x_pt dan y_pt dengan ukuran 1x3 menggunakan pytorch\n",
+        "import torch\n",
+        "\n",
+        "x_pt = torch.tensor([3, 2, 6])\n",
+        "x_pt"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9uMgnQalSelK",
+        "outputId": "35acc127-3097-4426-b605-0e0821b3facb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tensor([3, 2, 6])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "y_pt = torch.tensor([0, 4, 9])\n",
+        "y_pt"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SxOl7LF9TDeN",
+        "outputId": "9c02988d-f794-44e7-eef6-7268e485afae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tensor([0, 4, 9])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# buat vector x_tf dan y_tf dengan ukuran 1x3 menggunakan tensorflow\n",
+        "import tensorflow as tf\n",
+        "\n",
+        "x_tf = tf.Variable([5, 2, 1])\n",
+        "x_tf"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4WuGf7IWT0Ul",
+        "outputId": "71b3b4fe-a735-4144-f441-e12e1c12e1af"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<tf.Variable 'Variable:0' shape=(3,) dtype=int32, numpy=array([5, 2, 1], dtype=int32)>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "y_tf = tf.Variable([0, 1, 2])\n",
+        "y_tf"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9uyaClxMUHH-",
+        "outputId": "d46eb0f9-d2ec-45e3-b389-6c180804a571"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<tf.Variable 'Variable:0' shape=(3,) dtype=int32, numpy=array([0, 1, 2], dtype=int32)>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# hitung perkalian dot product antara vector x dan vector y\n",
+        "np.dot(x, y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oYU4IuXeUMPa",
+        "outputId": "d3c1a745-0dd6-4f70-ddc8-c621ea8c309d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "np.int64(12)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# hitung perkalian dot product antara vector x_pt dan vector y_pt\n",
+        "torch.dot(x_pt, y_pt)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-4v4DINPUnw-",
+        "outputId": "c760e5e5-7c5d-4e7f-d4fe-0efa9c696d3a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "tensor(62)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# hitung perkalian dot product antara vector x_tf dan vector y_tf\n",
+        "tf.reduce_sum(tf.multiply(x_tf, y_tf))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "85KD-DnnUy4K",
+        "outputId": "fba0c9ff-0a17-4f22-f54f-3ef1a6d5b291"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<tf.Tensor: shape=(), dtype=int32, numpy=4>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# lakukan perhitungan excercise menggunakan collab\n",
+        "y = np.array([[42,4,7,99],\n",
+        "              [-99,-3,17,22]\n",
+        "])\n",
+        "y_t = y.T\n",
+        "y_t"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "joX4ibAbVJUt",
+        "outputId": "60968260-b1f8-431a-b011-abe40c3fd4c5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[ 42, -99],\n",
+              "       [  4,  -3],\n",
+              "       [  7,  17],\n",
+              "       [ 99,  22]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = np.array([[25,10],\n",
+        "              [-2,1]\n",
+        "])\n",
+        "b = np.array([[-1,7],\n",
+        "              [10,8]\n",
+        "])\n",
+        "(a*b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tM1t1SskWa6c",
+        "outputId": "b1abee94-1514-4006-c303-47159bbc0b95"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[-25,  70],\n",
+              "       [-20,   8]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "w = np.array([-1,2,-2])\n",
+        "x = np.array([5,10,0])\n",
+        "\n",
+        "np.dot(w, x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EP9rQWGSWkO5",
+        "outputId": "0799a1ff-c07e-45ab-fdfd-32d7a8c42294"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "np.int64(15)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    }
+  ]
+}
